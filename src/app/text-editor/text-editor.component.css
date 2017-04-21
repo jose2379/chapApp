@@ -1,0 +1,13 @@
+button{
+  width: 100px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
