@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Mensaje} from "../mensaje.interface";
-//import { Mensaje }
 
 @Component({
   selector: 'app-text-editor',
@@ -33,5 +32,4 @@ export class TextEditorComponent implements OnInit {
       this.userName = '';
     }
   }
-
 }
