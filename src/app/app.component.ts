@@ -17,7 +17,7 @@ export class AppComponent {
   }
 
   sumamosDesdePadre(ev:Mensaje){
-    let mensajeRecibido:Mensaje = {contentMensaje: ev.contentMensaje, userName: ev.userName};
+//    let mensajeRecibido:Mensaje = {contentMensaje: ev.contentMensaje, userName: ev.userName};
     this.arrMensajes.push(ev);
 //    this.mensajeRecibido = ev.contentMensaje;
 //    this.userQueEnvia = ev.userName;
