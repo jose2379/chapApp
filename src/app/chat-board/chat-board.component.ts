@@ -9,8 +9,11 @@ import {Mensaje} from "../mensaje.interface";
 export class ChatBoardComponent implements OnInit {
 
   @Input() listaMensajes:Array<Mensaje>;
+  currentUser: string;
 
-  constructor() { }
+  constructor() {
+    this.currentUser = 'jose';
+  }
 
   ngOnInit() { }
 

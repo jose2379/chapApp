@@ -7,18 +7,23 @@ import { AppComponent } from './app.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import { ChatBoardComponent } from './chat-board/chat-board.component';
 
+import {UserService} from "./user.service";
+import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     TextEditorComponent,
-    ChatBoardComponent
+    ChatBoardComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

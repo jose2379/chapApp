@@ -1,6 +1,7 @@
 <ul>
-  <li *ngFor="let mensaje of listaMensajes">
-    <p>{{ mensaje.userName }}</p>
+  <li *ngFor="let mensaje of listaMensajes; let i = index" [ngClass]="{'propio': mensaje.userName == currentUser, 'ajeno': mensaje.userName != currentUser}">
+    <p *ngIf="mensaje.userName == currentUser">Yo</p>
+    <p *ngIf="mensaje.userName != currentUser">Mensaje de: {{ mensaje.userName }}</p>
     <p>{{ mensaje.contentMensaje }}</p>
   </li>
 </ul>

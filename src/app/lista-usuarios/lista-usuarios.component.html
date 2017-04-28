@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let usuario of arrUsuarios">
+    <h3>{{ usuario.name.last }}, {{ usuario.name.first }}</h3>
+    <img [src]="usuario.picture.medium" alt="">
+  </li>
+</ul>

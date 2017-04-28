@@ -1,0 +1,24 @@
+ul{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}
+
+li{
+  min-height: 20px;
+  width: 80%;
+  background-color: lightgray;
+  border-radius: 1rem;
+  list-style: none;
+  padding: .8rem;
+
+}
+.propio{
+  color: blue;
+  align-content: flex-end;
+}
+.ajeno{
+  color: red;
+  align-content: flex-start;
+}

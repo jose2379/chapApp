@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Mensaje} from "./mensaje.interface";
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,20 +8,21 @@ import {Mensaje} from "./mensaje.interface";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
   arrMensajes:Array<Mensaje>;
-  mensajeRecibido:string;
-  userQueEnvia:string;
+  arrUsuarios: Array<Object>;
 
 
-  constructor(){
+  constructor(private uS : UserService){
     this.arrMensajes = [];
+    uS.getUser()
+      .subscribe(usuarios => {
+        this.arrUsuarios = usuarios['results'];
+        console.log('usuarios', this.arrUsuarios);
+      })
+
   }
 
   sumamosDesdePadre(ev:Mensaje){
-    let mensajeRecibido:Mensaje = {contentMensaje: ev.contentMensaje, userName: ev.userName};
     this.arrMensajes.push(ev);
-//    this.mensajeRecibido = ev.contentMensaje;
-//    this.userQueEnvia = ev.userName;
   }
 }
