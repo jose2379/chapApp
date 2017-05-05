@@ -24,5 +24,4 @@ export class UserService {
     let respuesta = res.json();
     return respuesta;
   }
-
 }

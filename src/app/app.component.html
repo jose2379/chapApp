@@ -1,4 +1,8 @@
-<app-text-editor (enviamosMensajeDesdeHijo)="sumamosDesdePadre($event)"></app-text-editor>
-<app-chat-board [listaMensajes]="arrMensajes"></app-chat-board>
-<!--<app-chat-board [listaMensajes]="arrMensajes"></app-chat-board>-->
-<app-lista-usuarios [arrUsuarios]="arrUsuarios"></app-lista-usuarios>
+<main class="main-chat">
+  <h1>Chat App</h1>
+  <a routerLink="/chat" routerLinkActive="active">Chat</a>
+  <a routerLink="/contact" routerLinkActive="active">Contactos</a>
+  <router-outlet></router-outlet>
+</main>
+<!--<app-lista-usuarios [arrUsuarios]="arrUsuarios"></app-lista-usuarios>-->
+

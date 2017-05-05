@@ -1,29 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { TextEditorComponent } from './text-editor/text-editor.component';
-import { ChatBoardComponent } from './chat-board/chat-board.component';
 
-import {UserService} from "./user.service";
-import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
-
+import { routes } from './app.routes';
+import { RouterModule } from '@angular/router';
+import { PreloadSelectedModulesList } from '../app/modules/+chat/preload-custom.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TextEditorComponent,
-    ChatBoardComponent,
-    ListaUsuariosComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadSelectedModulesList
+    })
   ],
-  providers: [UserService],
+  providers: [PreloadSelectedModulesList],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

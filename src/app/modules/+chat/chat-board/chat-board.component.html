@@ -1,3 +1,4 @@
+<h1>Muestra de envio</h1>
 <ul>
   <li *ngFor="let mensaje of listaMensajes; let i = index" [ngClass]="{'propio': mensaje.userName == currentUser, 'ajeno': mensaje.userName != currentUser}">
     <p *ngIf="mensaje.userName == currentUser">Yo</p>
