@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { PreloadSelectedModulesList } from '../app/modules/+chat/preload-custom.service';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PreloadSelectedModulesList } from '../app/modules/+chat/preload-custom.
     BrowserModule,
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadSelectedModulesList
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [PreloadSelectedModulesList],
   bootstrap: [AppComponent]

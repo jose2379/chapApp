@@ -22,4 +22,8 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  enviarDatos(){
+    console.log('enviar datos');
+  }
+
 }
